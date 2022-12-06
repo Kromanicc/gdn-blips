@@ -1,0 +1,27 @@
+local QBCore = exports['qb-core']:GetCoreObject()
+
+-- blip with coords // Copy and paste to add more random blips
+Citizen.CreateThread(function()
+    local blip = AddBlipForCoord(  Config.Blip.x, Config.Blip.y, Config.Blip.z)
+    SetBlipSprite (blip, 140)
+    SetBlipDisplay(blip, 4)
+    SetBlipScale  (blip, 0.7)
+    SetBlipColour (blip, 2)
+    SetBlipAsShortRange(blip, true)
+    BeginTextCommandSetBlipName("STRING")
+    AddTextComponentString("Crack House")
+    EndTextCommandSetBlipName(blip)
+end)
+
+--- blip with config // Copy and paste to add more random blips 
+Citizen.CreateThread(function()
+    local blip = AddBlipForCoord(  Config.Blip2.x, Config.Blip2.y, Config.Blip2.z)
+    SetBlipSprite (blip, 140)
+    SetBlipDisplay(blip, 4)
+    SetBlipScale  (blip, 0.7)
+    SetBlipColour (blip, 2)
+    SetBlipAsShortRange(blip, true)
+    BeginTextCommandSetBlipName("STRING")
+    AddTextComponentString("Crack House")
+    EndTextCommandSetBlipName(blip)
+end)
